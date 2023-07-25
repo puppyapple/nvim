@@ -10,6 +10,7 @@ vim.keymap.set("o", "H", "^")
 vim.keymap.set("o", "L", "$")
 vim.keymap.set("v", "H", "^")
 vim.keymap.set("v", "L", "$")
+vim.keymap.set('v', 'Y', '<Plug>OSCYankVisual')
 
 -- local Util = require("lazyvim.util")
 
