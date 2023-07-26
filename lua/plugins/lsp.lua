@@ -28,6 +28,9 @@ local pyright_opts = {
   },
   single_file_support = true,
 }
+local format = function()
+  require("lazyvim.plugins.lsp.format").format({ force = true })
+end
 return {
   "neovim/nvim-lspconfig",
   init = function()
@@ -48,6 +51,8 @@ return {
       has = "codeAction",
     }
     keys[#keys + 1] = { "<leader>lr", vim.lsp.buf.rename, desc = "Rename", has = "rename" }
+    keys[#keys + 1] = { "<leader>ff", format, desc = "Format Document", has = "formatting" }
+    keys[#keys + 1] = { "<leader>ff", format, desc = "Format Range", mode = "v", has = "rangeFormatting" }
   end,
   opts = {
     servers = {
