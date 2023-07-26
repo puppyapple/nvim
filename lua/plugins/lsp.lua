@@ -28,12 +28,11 @@ local pyright_opts = {
   },
   single_file_support = true,
 }
-return -- LSP keymaps
-{
+return {
   "neovim/nvim-lspconfig",
   init = function()
     local keys = require("lazyvim.plugins.lsp.keymaps").get()
-    -- change a keymap
+    keys[#keys + 1] = { "<leader>ca", false }
     keys[#keys + 1] = { "<leader>cA", false }
     keys[#keys + 1] = { "gr", false }
     keys[#keys + 1] = { "gd", false }
@@ -46,17 +45,14 @@ return -- LSP keymaps
       vim.lsp.buf.code_action,
       desc = "Code Action",
       mode = { "n", "v" },
-      has = "codeAction"
+      has = "codeAction",
     }
-    keys[#keys + 1] = { "<leader>ca", false }
     keys[#keys + 1] = { "<leader>lr", vim.lsp.buf.rename, desc = "Rename", has = "rename" }
   end,
   opts = {
     servers = {
       pyright = pyright_opts,
       ruff_lsp = {},
-    },
-    setup = {
     },
   },
 }

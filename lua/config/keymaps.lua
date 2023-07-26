@@ -30,6 +30,7 @@ end
 
 map("n", "<leader>k", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev buffer" })
 map("n", "<leader>j", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer" })
+map("n", "<leader>bj", "<cmd>BufferLinePick<cr>", { desc = "Jump to buffer" })
 map({ "v", "n", "s" }, "<leader>fs", "<cmd>w<cr><esc>", { desc = "Save file" })
 map("n", "<leader>i", "<cmd>lua require('swenv.api').pick_venv()<cr>", { desc = "Choose Env" })
 map("n", "gp", "<cmd>lua require('goto-preview').goto_preview_definition()<cr>", { desc = "Peek definitions" })

@@ -6,7 +6,6 @@ return {
     },
     defaults = {
       ["<leader>l"] = { name = "+LSP" },
-      ["<leader>c"] = "which_key_ignore"
     }
   },
   -- config = function(_, opts)
