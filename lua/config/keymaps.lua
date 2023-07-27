@@ -12,7 +12,9 @@ vim.keymap.set("v", "H", "^")
 vim.keymap.set("v", "L", "$")
 vim.keymap.set('v', 'Y', '<Plug>OSCYankVisual')
 vim.api.nvim_del_keymap("n", "<leader>l")
--- local Util = require("lazyvim.util")
+
+local Util = require("lazyvim.util")
+local lazyterm = function() Util.float_term(nil, { cwd = Util.get_root() }) end
 
 local function map(mode, lhs, rhs, opts)
   local keys = require("lazy.core.handler").handlers.keys
@@ -39,3 +41,5 @@ map("n", "<leader>h", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" 
 map("n", "gl", vim.diagnostic.open_float, { desc = "Show Line Diagnostics" })
 map("n", "<leader>L", "<cmd>Lazy<cr>", { desc = "Lazy" })
 map("n", "<leader>li", "<cmd>LspInfo<cr>", { desc = "Lsp Info" })
+map("n", "<c-\\>", lazyterm, { desc = "Terminal (root dir)" })
+map("t", "<c-\\>", "<cmd>close<cr>", { desc = "Hide Terminal" })

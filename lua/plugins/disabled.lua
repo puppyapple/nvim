@@ -3,5 +3,5 @@ return {
   -- { "jose-elias-alvarez/null-ls.nvim", enabled = false },
   { "folke/neoconf.nvim",          enabled = false },
   -- { "RRethy/vim-illuminate",       enabled = false },
-  { "itchyny/vim-cursorword",      enabled = false },
+  -- { "itchyny/vim-cursorword",      enabled = false },
 }
