@@ -7,6 +7,7 @@ vim.diagnostic.config({
     border = "rounded",
   },
 })
+vim.opt.splitkeep = "cursor"
 -- local get_filename = function(path)
 --   local filename_with_relative_path = vim.fn.substitute(path, vim.fn.getcwd() .. "/", "", "")
 --   local filename = filename_with_relative_path:match("([^/]+)$")

@@ -93,6 +93,13 @@ return {
             removed = icons.git.removed,
           },
         },
+        { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
+        {
+          "filename",
+          color = { fg = colors.cyan },
+          path = 1,
+          symbols = { modified = "  ", readonly = "", unnamed = "" },
+        },
         {
           "diagnostics",
           sources = { "nvim_diagnostic" },
@@ -103,13 +110,6 @@ return {
             hint = icons.diagnostics.Hint,
           },
           -- cond = conditions.hide_in_width,
-        },
-        { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
-        {
-          "filename",
-          color = { fg = colors.cyan },
-          path = 1,
-          symbols = { modified = "  ", readonly = "", unnamed = "" },
         },
         -- stylua: ignore
         -- {

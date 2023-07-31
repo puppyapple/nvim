@@ -22,7 +22,7 @@ local pyright_opts = {
         autoSearchPaths = true,
         diagnosticMode = "workspace",
         useLibraryCodeForTypes = true,
-        reportGeneralTypeIssues = true,
+        -- reportGeneralTypeIssues = true,
       },
     },
   },

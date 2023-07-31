@@ -41,5 +41,15 @@ map("n", "<leader>h", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" 
 map("n", "gl", vim.diagnostic.open_float, { desc = "Show Line Diagnostics" })
 map("n", "<leader>L", "<cmd>Lazy<cr>", { desc = "Lazy" })
 map("n", "<leader>li", "<cmd>LspInfo<cr>", { desc = "Lsp Info" })
-map("n", "<c-\\>", lazyterm, { desc = "Terminal (root dir)" })
-map("t", "<c-\\>", "<cmd>close<cr>", { desc = "Hide Terminal" })
+map("n", "<leader>lu", "<cmd>LspRestart<cr>", { desc = "Restart LSP" })
+map("n", "<c-/>", "<cmd>ToggleTerm direction=horizontal<cr>", { desc = "Terminal (root dir)" })
+map("t", "<c-/>", "<cmd>close<cr>", { desc = "Hide Terminal" })
+map("n", "<leader>gg",
+  function()
+    Util.float_term({ "lazygit" },
+      { cwd = Util.get_root(), esc_esc = false, ctrl_hjkl = false, size = { width = 1, height = 1 } })
+  end,
+  { desc = "Lazygit (root dir)" })
+map("n", "<leader>gG",
+  function() Util.float_term({ "lazygit" }, { esc_esc = false, ctrl_hjkl = false, size = { width = 1, height = 1 } }) end,
+  { desc = "Lazygit (cwd)" })
