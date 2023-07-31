@@ -53,3 +53,4 @@ map("n", "<leader>gg",
 map("n", "<leader>gG",
   function() Util.float_term({ "lazygit" }, { esc_esc = false, ctrl_hjkl = false, size = { width = 1, height = 1 } }) end,
   { desc = "Lazygit (cwd)" })
+map("n", "<leader>gd", "<cmd>DiffviewFileHistory %<cr>", { desc = "Git diff view" })
