@@ -56,6 +56,7 @@ return {
     keys[#keys + 1] = { "<leader>ff", format, desc = "Format Range", mode = "v", has = "rangeFormatting" }
   end,
   opts = {
+    format = { timeout_ms = 3000 },
     servers = {
       pyright = pyright_opts,
       ruff_lsp = {},

@@ -54,3 +54,8 @@ map("n", "<leader>gG",
   function() Util.float_term({ "lazygit" }, { esc_esc = false, ctrl_hjkl = false, size = { width = 1, height = 1 } }) end,
   { desc = "Lazygit (cwd)" })
 map("n", "<leader>gd", "<cmd>DiffviewFileHistory %<cr>", { desc = "Git diff view" })
+map("n", "<leader>xd", "<cmd>TroubleClose<cr>", { desc = "Close Trouble Window" })
+map('n', '<leader>fR', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {
+  desc = "Search on current file"
+})
+map("n", "<leader>fc", "<cmd>lua require('spectre.actions').run_replace()<CR>", { desc = "Confirm Replace" })

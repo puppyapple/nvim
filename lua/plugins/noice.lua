@@ -7,6 +7,11 @@ return {
         opts = { stop = true },
       },
     },
+    notify = {
+      enabled = true,
+      view = "notify",
+      top_down = false,
+    },
     presets = {
       lsp_doc_border = true
     }
