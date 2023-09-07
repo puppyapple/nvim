@@ -36,7 +36,7 @@ return {
   init = function()
     require('lspconfig.ui.windows').default_options.border = 'rounded'
     local keys = require("lazyvim.plugins.lsp.keymaps").get()
-    keys[#keys + 1] = { "<leader>ca", false }
+    keys[#keys + 1] = { "<leader>ca", false, mode = { "n", "v" } }
     keys[#keys + 1] = { "<leader>cA", false }
     keys[#keys + 1] = { "gr", false }
     keys[#keys + 1] = { "gd", false }
