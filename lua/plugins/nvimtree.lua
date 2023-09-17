@@ -35,6 +35,9 @@ return {
     respect_buf_cwd = true,
     remove_keymaps = false,
     select_prompts = false,
+    diagnostics = {
+      enable = true,
+    },
     view = {
       adaptive_size = false,
       centralize_selection = true,
