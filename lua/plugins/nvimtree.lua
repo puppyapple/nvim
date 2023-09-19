@@ -33,7 +33,7 @@ return {
     sync_root_with_cwd = true,
     reload_on_bufenter = false,
     respect_buf_cwd = true,
-    remove_keymaps = false,
+    -- remove_keymaps = false,
     select_prompts = false,
     diagnostics = {
       enable = true,
