@@ -8,6 +8,7 @@ local function on_attach(bufnr)
   api.config.mappings.default_on_attach(bufnr)
   vim.keymap.set("n", "l", api.node.open.edit, opts("Open"))
   vim.keymap.set("n", "v", api.node.open.vertical, opts("Open: Vertical Split"))
+  vim.keymap.set("n", "h", api.node.open.horizontal, opts("Open: Horizontal Split"))
 end
 
 return {
@@ -42,7 +43,7 @@ return {
       adaptive_size = false,
       centralize_selection = true,
       width = 30,
-      hide_root_folder = false,
+      -- hide_root_folder = false,
       side = "left",
       preserve_window_proportions = false,
       number = false,

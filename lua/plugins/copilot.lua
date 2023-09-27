@@ -14,8 +14,8 @@ return {
         auto_trigger = true,
         accept = false, -- disable built-in keymapping
         keymap = {
-          jump_prev = "[c",
-          jump_next = "]c",
+          prev = "<C-p>",
+          next = "<C-n>",
           accept = "<C-i>",
           refresh = "gc",
           open = "<C-c>"

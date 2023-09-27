@@ -3,7 +3,7 @@ return {
   "hrsh7th/nvim-cmp",
   opts = {
     sources = {
-      -- { name = "copilot",  group_index = 2 },
+      { name = "copilot",  group_index = 2 },
       { name = "nvim_lsp", group_index = 2 },
       { name = "luasnip",  group_index = 2 },
       { name = "buffer",   group_index = 2 },
@@ -12,7 +12,7 @@ return {
     sorting = {
       priority_weight = 2,
       comparators = {
-        -- require("copilot_cmp.comparators").prioritize,
+        require("copilot_cmp.comparators").prioritize,
         cmp.config.compare.offset,
         cmp.config.compare.exact,
         cmp.config.compare.score,
