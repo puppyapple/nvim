@@ -14,7 +14,7 @@ return {
         variables = {},
         -- Background styles. Can be "dark", "transparent" or "normal"
         sidebars = "transparent", -- style for sidebars, see below
-        floats = "dark", -- style for floating windows
+        floats = "dark",          -- style for floating windows
       },
       on_colors = function(colors)
         colors.border = "#565f89"
@@ -24,7 +24,8 @@ return {
         hl.DiagnosticVirtualTextHint = { bg = util.darken(c.magenta, 0.1), fg = c.magenta }
         hl.DiagnosticVirtualTextError = { bg = util.darken("#ff0000", 0.1), fg = "#ff0000" }
         hl.Error = { fg = "#ff0000" }
-        hl["@string.documentation"] = { fg = c.green }
+        hl["@string.documentation"] = { fg = "#278505" }
+        hl["@comment"] = { fg = "#278505" }
         hl["@function"] = { fg = "#2c56ff" }
         hl["@constructor"] = { fg = c.yellow, bold = true }
         hl["@parameter"] = { fg = "#fc589a", style = { italic = true } }
