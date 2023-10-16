@@ -6,11 +6,10 @@ return {
     },
     defaults = {
       ["<leader>l"] = { name = "+LSP" },
+      ["<leader>c"] = { name = "+ChatGPT" },
     }
   },
   -- config = function(_, opts)
-  --   local wk = require("which-key")
-  --   wk.setup(opts)
   --   wk.register(opts.defaults)
   -- end,
 }
