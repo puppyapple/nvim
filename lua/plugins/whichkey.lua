@@ -6,8 +6,8 @@ return {
     },
     defaults = {
       ["<leader>l"] = { name = "+LSP" },
-      ["<leader>c"] = { name = "+ChatGPT" },
-    }
+      ["<leader>c"] = { name = "+Code" },
+    },
   },
   -- config = function(_, opts)
   --   wk.register(opts.defaults)
