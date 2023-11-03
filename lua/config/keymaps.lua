@@ -41,8 +41,9 @@ map("n", "gl", vim.diagnostic.open_float, { desc = "Show Line Diagnostics" })
 map("n", "<leader>L", "<cmd>Lazy<cr>", { desc = "Lazy" })
 map("n", "<leader>li", "<cmd>LspInfo<cr>", { desc = "Lsp Info" })
 map("n", "<leader>lu", "<cmd>LspRestart<cr>", { desc = "Restart LSP" })
-map("n", "<leader>t", "<cmd>ToggleTerm direction=horizontal<cr>", { desc = "Terminal (root dir)" })
-map("t", "<leader>t", "<cmd>close<cr>", { desc = "Hide Terminal" })
+-- map("n", "<leader>t", "<cmd>ToggleTerm direction=horizontal<cr>", { desc = "Terminal (root dir)" })
+map("n", "<C-t>", "<cmd>ToggleTerm direction=horizontal<cr>", { desc = "Terminal (root dir)" })
+map("t", "<C-t>", "<cmd>close<cr>", { desc = "Hide Terminal" })
 map("n", "<leader>gg", function()
   Util.terminal.open(
     { "lazygit" },
@@ -58,6 +59,10 @@ map("n", "<leader>fR", '<cmd>lua require("spectre").open_file_search({select_wor
   desc = "Search on current file",
 })
 map("n", "<leader>fS", "<cmd>lua require('spectre.actions').run_replace()<CR>", { desc = "Confirm Replace" })
+map("n", "<leader>nf", "<cmd>Neogen func<CR>", { desc = "Function docstring" })
+map("n", "<leader>nF", "<cmd>Neogen file<CR>", { desc = "File docstring" })
+map("n", "<leader>nc", "<cmd>Neogen class<CR>", { desc = "Class docstring" })
+map("n", "<leader>nt", "<cmd>Neogen class<CR>", { desc = "Type docstring" })
 
 -- map({ "n", "v" }, "<leader>cc", "<cmd>ChatGPT<CR>", { desc = "ChatGPT" })
 -- map({ "n", "v" }, "<leader>ce", "<cmd>ChatGPTEditWithInstruction<CR>", { desc = "Edit with instruction" })
